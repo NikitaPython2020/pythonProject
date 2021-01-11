@@ -1,9 +1,11 @@
 from itertools import combinations
 
+rostel_string = 'Ростелеком'
+
 matchRostelecom = 0
 
-for i in range(10):
-    list_rostel = list(combinations('Ростелеком',i))
+for i in range(len(rostel_string)):
+    list_rostel = list(combinations(rostel_string,i))
     print(len(list_rostel))
     stats = {}
     with open('C:/users/user/Desktop/Нетология/01. Подготовка/DZ1/RUS.txt','r') as f:
@@ -14,4 +16,4 @@ for i in range(10):
                     print(line)
                     print(' ',''.join(cur_list_rostel))
                     matchRostelecom += 1
-print('Итого найдено слов с Ростелеком вхождений: ', matchRostelecom)
+print('Итого найдено слов, составленых из слова Ростелеком: ', matchRostelecom)
